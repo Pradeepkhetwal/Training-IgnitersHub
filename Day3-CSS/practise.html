@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .span {
+        display: inline-block;
+        border: 2px solid black;
+        width: 500px;
+        height: 300px;
+
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The main difference between inline and inline-block is that we can't set width and height of inline element but we can set width and height of inline-block element . And behave as inline in terms of taking space . 
+    
+    Note-: We can set height and width of only block and inline-block elements not the inline Element.
+    
+    When we set display as none the element is not visible and also does not take space , it becomes like it never existed.
+
+    And when we write  visibility : hidden then the item is only hided the space occupied by it remains their but the element is not shown.
+
+    -->
+    <span class="span">I am span and i am inline element</span>
+    <span>hello ji</span>
+  </body>
+</html>

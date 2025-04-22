@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        background-color: bisque;
+        /* width will become 80% of the viewing screen width */
+        /* width: 80vw; */
+        /* width will become 80% of the viewing screen height */
+        width: 80vh;
+
+        /* same concept is for height(vh). */
+
+        /* height = vmax means in the given viewing screen whichever either height or width of the screen whichever is greater  uksa 80% . For ex suppose we have screen of 800*400 so here width is more so height will be 80%of the width*/
+        height: 80vmax;
+
+        /* for vmin we have the same concept , just vice versa. Like height aur width mein se jo chota hoga uska x % . */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Viewport mein we have total 4 types of units
+  1.vw
+  2.vh
+  3.vmin
+  4.vmax 
+  -->
+    <div class="container">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quia
+      rem quam aut? Omnis, deserunt ea! Perspiciatis adipisci eos ea accusantium
+      minima? Porro aliquam laudantium accusantium nisi omnis et, commodi ex
+      expedita architecto non at velit ad quaerat doloremque unde.
+    </div>
+  </body>
+</html>

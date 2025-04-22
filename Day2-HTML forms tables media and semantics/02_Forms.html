@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <h2 style="text-align: center">Please register Yourself</h2>
+
+    <form target="_blank" style="justify-items: center">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" placeholder="please enter your name " required />
+      </div>
+      <br />
+      <div>
+        <label for="email">Email</label>
+        <input type="email" placeholder="enter your email" name="email" />
+      </div>
+      <br />
+      <div>
+        <label for="password">Password</label>
+        <input
+          type="password"
+          placeholder="please enter your password"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="rollnumber">Rollnumber</label>
+        <input
+          type="number"
+          placeholder="please enter your rollnumber"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="DOB">DOB</label>
+        <input
+          type="date"
+          placeholder="please enter your date of birth"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="image"></label>
+        <input
+          type="file"
+          placeholder="Enter your passport size pic"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label name="Gender">Gender</label>
+        <input type="radio" name="Gender" />Male
+        <input type="radio" name="Gender" />Female
+      </div>
+      <br />
+      <div>
+        <label for="skills"><strong>SKILLS</strong></label>
+        <input type="checkbox" name="skills" />NodeJs
+        <input type="checkbox" name="skills" />ExpressJs
+        <input type="checkbox" />MongoDb
+        <input type="checkbox" name="skills" />ReactJs
+        <input type="checkbox" />Java
+      </div>
+      <br />
+      <div>
+        <label>You are</label>
+        <select name="role">
+          <option value="student">Student</option>
+          <option value="employee">Employee</option>
+        </select>
+      </div>
+      <br />
+      <div>
+        <label>Tell us about yourself</label>
+        <textarea cols="20" ; rows="5"></textarea>
+      </div>
+      <br />
+      <div>
+        <label for="jaan">How are you </label>
+        <input list="replies" name="jaan" />
+        <datalist id="replies">
+          <option>I'm good</option>
+          <option>Tum kya karoge Jaan k</option>
+          <option>Hum to badiya hai tum sunao</option>
+          <option>Bas aap ki yado mein khoya rehta hoon</option>
+        </datalist>
+      </div>
+      <br />
+      <div>
+        <label for="fav-color">What is your favourite color</label>
+        <input type="color" name="fav-color" />
+      </div>
+      <br />
+      <input type="submit" value="Submit kardo bhai!" />
+      <input type="reset" value="Reset kardo bhai!" />
+      <button type="submit">Mein button hoon</button>
+      <label for="img">Mein image button hoon</label>
+      <input type="image" name="img" />
+    </form>
+  </body>
+</html>

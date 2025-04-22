@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        background-color: skyblue;
+        height: 25vh;
+        width: 40vw;
+        display: flex;
+        border: 2px solid black;
+
+        /* At first let's deal with the flex container property. */
+
+        /* flex-direction: column-reverse; */
+
+        /* flex-direction: column; */
+
+        flex-wrap: wrap;
+
+        /* adjusting the flex items horizontally */
+
+        /* justify-content: center; */
+
+        /* justify-content: space-between;
+
+        justify-content: space-evenly; */
+        /* 
+        justify-content: space-around; */
+
+        /* now let's arrange these items vertically */
+
+        /* align-items: center; */
+
+        /* align-items: end; */
+
+        /* align-items: start; */
+
+        /* align-content: center;*/
+
+        /* align-content: space-evenly;
+         */
+
+        /* align-content: space-around; */
+
+        /* align-content: space-between; */
+        /* 
+        align-content: space-evenly; */
+
+        /* align-content: strech; */
+
+        /* align-content: center; */
+
+        /* align-items: flex-start; */
+
+        /* flex-direction: ; */
+        /* justify-content: center; */
+        /* justify-content: flex-end; */
+
+        /* align-items: center; */
+
+        /* align-items: flex-start; */
+
+        /* align-items: flex-end; */
+
+        /* align-content: center; */
+
+        /* align-content: space-around; */
+
+        /* align-content: flex-end; */
+
+        /* align-content: flex-start; */
+      }
+
+      .flexitems {
+        border: 2px solid orchid;
+      }
+
+      #two {
+        align-self: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Learning FlexBox in CSS</h1>
+    </header>
+    <main>
+      <section>
+        <div class="container">
+          <div id="one" class="flexitems">item1</div>
+          <div id="two" class="flexitems">item2</div>
+          <div class="flexitems">item3</div>
+          <div class="flexitems">item4</div>
+          <div class="flexitems">item5</div>
+          <div class="flexitems">item6</div>
+          <div class="flexitems">item7</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

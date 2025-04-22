@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: grid;
+        border: 2px solid black;
+        grid-template-columns: 1fr 2fr 1fr;
+        height: 70vh;
+        gap: 0.15rem;
+        grid-template-rows: 20% 20%;
+        grid-auto-rows: 20%;
+      }
+
+      .items {
+        border: 2px solid orchid;
+      }
+      /* So these are the grid-items properties which are directly applied to the grid items individually.
+      
+
+      1.justify-self - strech(by default),start, center ,end.
+      2.align-self-: strech(by default), start , center ,end.
+      3.grid-column
+      4.grid-row
+      5.grid-area
+
+      Note-: In a css grid container each grid item has it's own grid area.The grid area refers to the space that a specific item occupies within the grid.
+
+      Now with the help of the align-self and justify-self we can align the item vertically and horizontally with respect to it's grid area. 
+
+
+      */
+
+      #item1 {
+        background-color: chocolate;
+        /* used to align the grid-item at the center horizontally in it's grid area. */
+        /* justify-self: center; */
+        /* justify-self: start; */
+
+        /* For vertical alignment we have align-self */
+
+        align-self: end;
+
+        /* Spanning the grid item */
+        /* For spanning any grid item across mutiple columns we have grid-column-stat and grid-column-end property. */
+
+        /* now this item1 will span across 2 columns not 3 columns , here column index is given by the column lines so for column 2 it's ending line is at 3 */
+        /* Now remaining items will adjust accordingly. */
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        /* shorthand for above */
+        grid-column: 1/3;
+
+        /* for spanning a column from start to end we can use  */
+        /* grid-column: 1/-1; */
+
+        /* instead of using the end index for spanning you can use span */
+        /* span 2 means item will span across 2 columns. It can be used for spanning across rows as well. */
+        /* it will span the #item 1 from column1 to 2nd column so it will span across 2 columns. */
+        grid-column: 1 / span 2;
+
+        /* spanning with rows is also same */
+
+        /* Will span across 2 rows. */
+        grid-row-start: 1;
+        grid-row-end: 3;
+
+        /* shorthand */
+        grid-row: 1/3;
+
+        /* or */
+        grid-row: 1 / span 2;
+
+        /* grid-area this property is shorthand for both spanning accross rows and columns */
+
+        /* rowstart/colstart/rowend/colend. */
+        grid-area: 1/1/3/3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="item1" class="items">item1</div>
+      <div id="item2" class="items">item2</div>
+      <div id="item3" class="items">item3</div>
+      <div id="item4" class="items">item4</div>
+      <div id="item5" class="items">item5</div>
+    </div>
+  </body>
+</html>

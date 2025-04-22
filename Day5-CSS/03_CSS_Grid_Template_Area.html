@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Grid Template Area -:This property allows us to make the grid layout by naming the grid items.It is defined inside the grid container. And Making Grid Template Area is the first step to create layout.*/
+      .container {
+        display: grid;
+        row-gap: 20px;
+        column-gap: 20px;
+
+        /* in this we can pass any name that we want like we have passed nav three times so it means there will be 3 columns so neeche jo bhi likhoge you can use 3 columns only */
+
+        /* now we have written nav three times so our nav item will be spanning across 3 columns and 1 row */
+
+        /* similarly sbr is written in 2 rows so it will span across row 2 and 3. */
+
+        /* Now we will assign there names to our elements so simply target any element and using grid-area:name use this for-ex if i write this #item1{
+          grid-area:nav
+      } this means item1 has become nav so it will span across the 3 columns.
+        */
+        grid-template-areas:
+          "nav nav nav"
+          "sbr main main"
+          "sbr main main"
+          "ftr ftr ftr";
+      }
+
+      .items {
+        border: 2px solid red;
+      }
+
+      #item1 {
+        /* it is the same grid area property that we used for the shorthand of row and column spannning. */
+        grid-area: nav;
+      }
+
+      #item2 {
+        grid-area: sbr;
+      }
+
+      #item3 {
+        grid-area: main;
+      }
+
+      #item4 {
+        grid-area: ftr;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="items" id="item1">item 1</div>
+      <div class="items" id="item2">item 2</div>
+      <div class="items" id="item3">item 3</div>
+      <div class="items" id="item4">item 4</div>
+    </div>
+  </body>
+</html>

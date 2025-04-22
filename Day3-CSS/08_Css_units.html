@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      section {
+        border: 2px solid black;
+        width: 50vw;
+        height: 50vh;
+      }
+
+      section > p {
+        border: 2px solid pink;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Here we will discuss these following css units -->
+    <!-- px (pixel) , em(M) , rem , vh(viewheight), vw(viewidth), % -->
+
+    <!-- px  -: it is a absolute unit matlab agar ek baar set kardi to utni hi rahegi , for ex aap font size 16px kar dete ho to it will remain 16 px no matter what happens , there is a option in a browser where we can increase the viewing size of the webpage but if the text is set as 16px , so even if from the setting you increase the size of the webpage , the text size will remain 16 as it is absolute -->
+
+    <!-- It is not recomended to use absolute units. -->
+
+    <!-- % is a relative unit if for any element suppose i write width:50% then in that case width will become the 50% width of it's parent same goes for height. -->
+
+    <!-- vh and vw , if for any element i write width:50vw this means width will be 50 viewwidth (viewwidth is defined as the width of the screen or the webpage which is visible) so if we write 100vw means it will take complete visible width and if we write 200vw then it will take 2 times the width of the visible screen ,same goes for vh as well for height. -->
+
+    <!-- em this unit is relative unit , also 1 em = 16px now if for any element we do like width : 2em then it's width will become 2 times of it's parent , and by default for all element the width is 1em.  -->
+
+    <!-- rem is also relative unit , here if for any element  we write width:2em then it's width will become 2 times of the root element i.e html so it is always recommended to use rem over em
+   
+   because in em suppose there are 3 elements and for the grandparent i make width as 2em and for it's child i make width as 3em and for grand child if i make width as 1em then the width will become 2*3*1 = 6em as it is depenedet on it's parent which itself it dependent on it's parent.
+   -->
+
+    <header>
+      <h1>hello</h1>
+    </header>
+    <section>
+      <h3>let's test</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi at
+        consectetur eos amet odit suscipit voluptatibus maiores dicta, ipsum
+        iusto dolorem doloribus quasi aut itaque recusandae! Iste delectus quae
+        ratione!
+      </p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 550px;
+
+        margin: 40px auto;
+        border: 2px solid skyblue;
+      }
+      h1 {
+        text-align: center;
+      }
+      .fruits {
+        width: 35%;
+        border: 2px solid orange;
+        float: left;
+      }
+      .vegetables {
+        width: 50%;
+        border: 2px solid red;
+        float: left;
+        margin-left: 50px;
+      }
+      .school {
+        border: 2px solid pink;
+        margin-top: 180px;
+        margin-bottom: 10px;
+        clear: both;
+      }
+      .college {
+        border: 2px solid green;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- When we float any element it comes out from the normal flow it now does not remain as the normal block element , and if one element is made to float and others are not then , other element will behave like as if the element which has been made float does not exist.
+     
+    In case suppose you want to keep the 2 div aside to each other using float and the div which comes first is not floated and the div which comes after is floated then these 2 div will not come aside to each other as the first div is not made to float so it will remain in it's block element behaviour and the div which was made float , uske bagal mein agar koi div uske neeche hoga to wo aa jayega because for this div the div which was made float does not exist anymore(it has came out from the normal flow.) -->
+
+    <!-- one you'll noticed is that other div elements(which are not floated) to whom which i not want to keep beside are coming above , so this is because the same that these elements now behave like the floated elements does not exists so they will stack on top or side by side with other elements, depending on the layout. 
+
+    To avoid this problem we have these solutions.
+    Apply clear: both; to the elements that should appear below the floated elements.
+    This tells the browser: "Hey, don't let me sit next to any floated elements. Clear any previous floats, and start below them." so use clear: both;  property in the css of that element whom you not want to come up.
+
+-->
+    <div class="container">
+      <h1>Hello ji</h1>
+      <div class="fruits">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam quos
+        quo sed rerum deleniti culpa excepturi qui consectetur nesciunt, iste
+        voluptatum, repellat porro dolores, velit officia deserunt eligendi.
+        Voluptate, iste.
+      </div>
+      <div class="vegetables">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+        enim, veritatis, ad aperiam aliquam nulla explicabo quas ipsam ut ipsa
+        maiores facere exercitationem non unde consequatur voluptates in
+        reprehenderit perspiciatis. Ea fuga totam, quod ut id officia alias ab
+        in!
+      </div>
+      <div class="school">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam,
+        molestias!.
+      </div>
+      <div class="college">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi veritatis
+        consequuntur reiciendis placeat ipsum, doloribus a perspiciatis unde
+        repellat corporis facere vitae eum, ut dolorem.
+      </div>
+    </div>
+  </body>
+</html>

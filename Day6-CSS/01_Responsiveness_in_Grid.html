@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+      }
+
+      .container div {
+        background-color: blueviolet;
+        border-radius: 20px;
+        padding: 20px;
+      }
+      @media screen and (max-width: 1200px) {
+        .container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media only screen and (max-width: 700px) {
+        .container {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="item1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia omnis,
+        temporibus nulla voluptatem aliquam repellat voluptatibus dolore nihil
+        dignissimos reiciendis iure? Eum impedit veritatis, esse velit excepturi
+        voluptatum repellendus at.
+      </div>
+      <div id="item2">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit vitae ab
+        impedit adipisci laudantium id, quisquam sed maiores ex voluptate,
+        perferendis ipsam eos, ipsa aliquam ducimus praesentium soluta
+        excepturi! Amet!
+      </div>
+      <div id="item3">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus porro
+        exercitationem sed explicabo corporis magnam, debitis vero perspiciatis
+        architecto quos reprehenderit quisquam consequatur. Autem unde beatae
+        consequatur, perspiciatis cumque aliquid.
+      </div>
+      <div id="item4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero odio
+        impedit est quisquam. Exercitationem atque unde omnis facere, quisquam
+        similique quam dignissimos, nesciunt doloremque vitae mollitia dolore
+        nihil, ad debitis!
+      </div>
+    </div>
+  </body>
+</html>

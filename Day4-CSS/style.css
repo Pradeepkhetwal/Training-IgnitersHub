@@ -1,0 +1,63 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.container{
+  display: flex;
+gap:20px;
+
+  align-items: center;
+  height: 100vh;
+ margin: 40px auto;
+
+ 
+}
+
+h3{
+  padding-inline:20px;
+}
+
+p{
+  /* this padding-inline simply used to set padding from left and right side. */
+  padding-inline: 20px;
+
+}
+
+.one{
+  background-color: coral;
+  border-radius: 10px;
+  flex: 1;
+}
+
+.two{
+  background-color: darkolivegreen;
+  border-radius: 10px;
+  flex:1;
+}
+
+.three{
+  background-color: darkslateblue;
+  border-radius: 10px;
+  flex:1;
+}
+
+button{
+  margin-top:35px;
+  margin-bottom:15px;
+  margin-left:15px;
+  padding:7px;
+  border:none;
+  font-weight: bold;
+  border-radius: 15px;
+}
+
+
+@media (max-width:1200px){
+  .container{
+    flex-direction: column;
+    gap:10px;
+  }
+}
+

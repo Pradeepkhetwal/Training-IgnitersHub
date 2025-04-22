@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        background-color: cadetblue;
+        min-height: 100vh;
+        position: relative;
+        border: 2px solid blue;
+        top: 200px;
+      }
+      .items1 {
+        border: 2px solid red;
+        position: fixed;
+        top: 300px;
+        left: 200px;
+      }
+      .items2 {
+        border: 2px solid red;
+        position: relative;
+        top: 200px;
+        left: 40px;
+      }
+      .items3 {
+        border: 2px solid red;
+        position: absolute;
+        top: 400px;
+        left: 200px;
+      }
+      .items4 {
+        border: 2px solid red;
+      }
+      .items5 {
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="items1">Fixed</div>
+      <div class="items2">Relative</div>
+      <div class="items3">Absolute</div>
+    </div>
+  </body>
+</html>

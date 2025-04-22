@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: aquamarine;
+      }
+
+      /* after @media we write media type so media type is of following type 
+      
+       Media Type	        What it means
+      all	                 Applies to all devices (default)
+      screen(by default)	  Regular screens (phones, tablets, laptops, etc.)
+      print	                 Styles when you print the webpage
+      */
+
+      /* media type means ki kiske liye you're defining media query ki like webpage ko print karre ho ya fir screens mein show karre ho . */
+
+      /*this  media will run for every screen laptop , tab, mobile every screen device. */
+      @media screen and (min-width: 200px) and (max-width: 500px) {
+        body {
+          background-color: green;
+        }
+
+        header {
+          font-style: italic;
+        }
+      }
+
+      /* screen is by default media type so even if we don't mention it , the media query will be applicable to all screen  like below */
+      /* @media(orientation: portrait) {
+        body {
+          background-color: black;
+        }
+      } */
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Understanding media queries</h1>
+    </header>
+  </body>
+</html>

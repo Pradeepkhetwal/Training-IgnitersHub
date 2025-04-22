@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: black;
+      }
+      .container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding: 1em;
+      }
+
+      header {
+        flex: 1;
+        border-radius: 1em;
+        background-color: orange;
+      }
+
+      .first {
+        flex: 4;
+        display: flex;
+        gap: 2em;
+        border-radius: 2em;
+      }
+
+      .flexitems1 {
+        flex: 3;
+
+        border-radius: 2em;
+        background-color: cornflowerblue;
+      }
+      .flexitems2 {
+        flex: 1;
+
+        border-radius: 2em;
+        background-color: tomato;
+      }
+      .container2 {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column-reverse;
+
+        gap: 1em;
+        padding: 1em;
+      }
+      footer {
+        flex: 1;
+
+        border-radius: 1em;
+        background-color: orange;
+      }
+
+      .firstsecond {
+        flex: 4;
+        display: flex;
+        gap: 2em;
+        border-radius: 2em;
+        flex-direction: row-reverse;
+      }
+
+      .flexitems1second {
+        flex: 3;
+
+        border-radius: 2em;
+        background-color: cornflowerblue;
+      }
+      .flexitems2second {
+        flex: 1;
+
+        border-radius: 2em;
+        background-color: tomato;
+      }
+
+      @media (max-width: 960px) {
+        .first,
+        .firstsecond {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header></header>
+      <section class="first">
+        <div class="flexitems1"></div>
+        <div class="flexitems2"></div>
+      </section>
+    </div>
+    <div class="container2">
+      <footer></footer>
+      <section class="firstsecond">
+        <div class="flexitems1second"></div>
+        <div class="flexitems2second"></div>
+      </section>
+    </div>
+  </body>
+</html>

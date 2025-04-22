@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        min-height: 100vh;
+        display: grid;
+        border: 2px solid black;
+        gap: 0.5rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+          "head head head head" "sec sec sec asd"
+          "sec sec sec asd" "sec sec sec asd" "foot foot foot foot";
+      }
+
+      #head {
+        grid-area: head;
+
+        text-align: center;
+        background-color: burlywood;
+      }
+
+      #head h1 {
+        margin-top: 20px;
+      }
+
+      .main {
+        grid-area: sec;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 4rem;
+        align-content: space-evenly;
+      }
+
+      section {
+        padding: 10px;
+        flex: 1;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .item {
+        padding: 20px;
+      }
+
+      .aside {
+        grid-area: asd;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+
+      .left {
+        flex: 1;
+        padding: 14px;
+      }
+
+      #left1 h3 {
+        margin-top: 10px;
+      }
+
+      .footer {
+        grid-area: foot;
+        text-align: center;
+      }
+
+      .left ul {
+        list-style: none;
+      }
+
+      .left ul li {
+        padding: 12px;
+        font-size: 1rem;
+        color: #333;
+      }
+
+      @media screen and (max-width: 800px) {
+        .container {
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 4fr 2fr 1fr;
+          grid-template-areas:
+            "head"
+            "sec"
+            "asd"
+            "foot";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header id="head">
+        <h1>My Blog Layout</h1>
+        <h4>It's a blog yes it's a blog using CSS grid</h4>
+      </header>
+      <div class="main">
+        <section>
+          <img src="" alt="no image" />
+          <h3>My first blog</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
+            animi ipsum soluta laborum tempora quia mollitia velit recusandae
+            impedit ducimus.
+          </p>
+        </section>
+        <section>
+          <img src="" alt="no image" />
+          <h3>My second blog</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+            blanditiis quam unde veritatis obcaecati iure. Eius.
+          </p>
+        </section>
+        <section>
+          <img src="" alt="no image" />
+          <h3>My third blog</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+            blanditiis quam unde veritatis obcaecati iure. Eius.
+          </p>
+        </section>
+      </div>
+      <aside class="aside">
+        <div class="left" id="left1">
+          <h3>Aside content</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ut a
+            ab? Nisi fugit enim earum tempore, nemo amet inventore
+            exercitationem culpa quos sed, autem officia saepe impedit, deleniti
+            libero? Dicta, ex facere maxime quia molestiae ad ipsam quasi, quas,
+            qui fuga quaerat modi fugit beatae minima odit delectus aspernatur!
+          </p>
+        </div>
+        <div class="left">
+          <h3>More info</h3>
+          <ul>
+            <li>Heath</li>
+            <li>Food</li>
+            <li>Education</li>
+            <li>Lifestyle</li>
+          </ul>
+        </div>
+      </aside>
+      <footer class="footer">
+        <h3>This is the footer section.</h3>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+
+      box-sizing: border-box;
+    }
+    .container {
+      /* when we will make dispaly as grid you'll se no change but now the container has become grid container , and in grid container by default the grid elements are arranged in a single column. */
+
+      /* Elements inside the grid container are called as grid items. */
+
+      /* So for any grid container we have these properties. 
+      
+      1.gap
+      2.grid-template-columns.
+      3.grid-template-rows.
+      4.justify-content.
+      5.align-content.
+      6.align-items.
+      */
+      display: grid;
+
+      height: 70vh;
+
+      /* gap is used to provide gap between grid items (gap here is provided between both rows and columns.) 
+      */
+      gap: 4px;
+
+      /* gap only between grid rows. */
+
+      /* row-gap: 2px; */
+
+      /* grid-template column- it is used to create columns (dekho by deault jitne bhi elements hote hai container k andar they all are arrange within a single column ) so through this property we can create as many columns we want and we can define their width as well. So the items will adjust themselves in those columns accordingly.
+      
+      
+      Suppose we have 6 grid-items and we make 2 columns so each column will automatically have 3 grid-items.
+
+      And width of these itmes can be controlled by this property.
+      */
+
+      /* here we are creating 2 columns in which one will take 30% widht and other will take 70% width, as we have used realtive size so they will be responsive.*/
+      grid-template-columns: 30% 70%;
+
+      /* This is also relative unit so repsonsive. */
+      grid-template-columns: 20vw 40vw;
+
+      /* This 1fr means 1 fraction so as we have make 4 columns of 1fr , 2fr , 1fr, 1fr so out of total 5 fractional space , 2nd column will occupy 2 fraction space and other will occupy 1 fraction space */
+
+      /* This is also relative unit so it is also responsive. */
+      grid-template-columns: 1fr 2fr 1fr 1fr;
+
+      /* This repeat is used when we want to make coloumns of equal sizes here first we pass the number of columns that we want to create and then their size. */
+
+      /* So this will create 4 columns of equal sizes. */
+
+      grid-template-columns: repeat(4, 1fr);
+
+      /* now if i don't know ki kitne columns ban skte hai of a fixed size so we can use  autofill it create columns jitne ban skte hai automatically*/
+      /* 
+      grid-template-columns: repeat(autofill, 100px); */
+
+      /* We have auto as well it is similar to fr matlab it used to occupy the remaining widht*/
+
+      /* This will create 2 columns of equal size */
+      grid-template-columns: auto auto;
+
+      border: 2px solid black;
+
+      /* first col will be of 100px and other will take the remaining space. */
+      grid-template-columns: 100px auto;
+
+      /* Next is grid-template-rows this property is used to set the height of the rows (note-: Agar humne 2 rows ki height define kar di to it doesn't mean ki sirf 2 hi rows banegi , it is not like grid-template-columns where if you define width for 2 columns to 2 hi column banege) grid-template-rows is just used to set height of the rows.*/
+
+      /* height of 1st and 2nd row will be 200px but for the 3rd row as height is not defined so it will take the default space jo wo pehle occupy karri thi */
+      grid-template-rows: 100px 100px;
+
+      /* to provide height to all the remaining rows we have this property */
+
+      /* Now all the remaining rows will have height of 150px. */
+      grid-auto-rows: 100px;
+
+      /* justify content: This property is used to horizonatally align the content9grid) present inside the grid container.  */
+
+      /* It centers all the grid items horizontally */
+
+      justify-content: center;
+
+      /* it has the following 
+      start-:	Aligns the grid to the left (start of inline axis)
+      end -:	Aligns the grid to the right (end of inline axis)
+      stretch-:	Stretches the grid to fill the container (default)
+      space-between-:	Equal space between columns, no space at edges of the container
+      space-around-:Equal space around columns (half at edges of the container)
+      space-evenly-:Equal space between and around all columns (including edges of the container)
+      */
+
+      /*align-content property-:(For this property you'll first need to give height to the grid container).
+       It is used to vertically align the grid inside the container */
+      /* This also has same properties as mentioned above. */
+
+      /* align-content: center; */
+
+      /* align-items properties is used to vertically align each grid item in their respective row */
+      /* now each grid item will be at center in it's row. */
+      /* it has the following values 
+     start	 -:  Aligns  items to the top of their grid cell
+      end	 -: Aligns items to the bottom of their grid cell
+      center	 -: Vertically centers items inside their cell
+      stretch	 -: Stretches items to fill the full height of their grid cell (default) */
+      align-items: center;
+    }
+    .item {
+      border: 2px solid red;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div id="id1" class="item">item1</div>
+      <div id="id2" class="item">item2</div>
+      <div id="id3" class="item">item3</div>
+      <div id="id4" class="item">item4</div>
+      <div id="id5" class="item">item5</div>
+      <div id="id6" class="item">item6</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!-- Video in html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media tags in <html></html></title>
+  </head>
+  <body>
+    <h1>This is video</h1>
+    <!-- modern browsers autoplay ko support nahi karte in video if muted is not used . To prevent user from bad experience. -->
+    <!-- Video is added using this video tag and inside source tag we define link to the video and type defines the format of the video -->
+    <video height="300px" width="400px" controls>
+      <source src="Annual General Meeting FY 2019-20.mp4" type="video/mp4" />
+    </video>
+    <!-- let's add a audio -->
+    <!-- Audio is added using this audio tag and inside source tag we define link to the audio and type defines the format of the audio -->
+     <!-- Hum log more than one source tag likh skte hai andar incase agar koi video nahi load ho pati to dusra source tag run ho jayega aur wo wali audio/video serve ho jayegi web page mein. -->
+    <h1>Audio File</h1>
+    <audio controls>
+      <source src="song.mp3" type="audio/mp3" />
+    </audio>
+
+    <!-- Let's play youtube video in our webpage using iframe element -->
+    <!--The <iframe> element in HTML is used to embed another HTML document within the current document. It's often used to display content from external sources, such as other web pages, videos, maps, or advertisements, directly within a webpage  -->
+    <!-- In the yt video link by adding autoplay = 1 we can autoplay the video and by mute = 1 video will be muted when autoplayed , to add these things in the link use ? and if you want to loop that video we can add loop = 1 -->
+    <!-- Also the youtube video url should be in this format strictly https://www.youtube.com/embed/VIDEO_ID -->
+
+    <iframe
+      width="400"
+      height="400"
+      src="https://www.youtube.com/embed/fiz1ORTBGpY?autoplay=1&mute=1&list=PLfFghEzKVmjvuSA67LszN1dZ-Dd_pkus6"
+    ></iframe>
+  </body>
+</html>

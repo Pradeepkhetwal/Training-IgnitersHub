@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Embed and Object tag or element in html are used to  embed various types of media or external content into an HTML document. This can include PDFs, images, videos, Java applets (legacy), and even other web pages.  Both embed and object tag work the same , 
+     So which to use When
+     Use <embed> when you just want to embed something quickly, like a PDF or video, and don’t need a fallback.
+      Use <object> when you want more control, such as providing a fallback message or alternative content if the resource can’t be loaded.
+
+        what is fallback?
+        A fallback is alternative content that's shown when a browser can't load or display the primary content (like a PDF, video, or image).
+      -->
+    <h1>We are presenting a pdf file below</h1>
+    <embed
+      src="springer image to caption.pdf"
+      type="application/pdf"
+      width="200"
+      height="300"
+    />
+
+    <!-- Now with the help of object tag -->
+    <!-- Look if the browser does not support to show this pdf then the paragraph will show that your browser does not support pdf viewing -->
+    <!-- data here is same as src (in object element instead of src , data is used , it contains the same(url of the file))-->
+    <!-- file.pdf does not exist in this directory so object tag k andar jo paragraph hai wo run hoga ab as a fallback message -->
+    <div>
+      <object data="file.pdf" type="application/pdf">
+        <p>Your browser does not support showing this file</p>
+        <p>this is a fallback message as we have used object tag</p>
+      </object>
+    </div>
+  </body>
+</html>
