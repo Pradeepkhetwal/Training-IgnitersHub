@@ -1,8 +1,10 @@
+// Creating object
 const data = {
   id: 1,
   naam:"Pradeep"
 }
 
+//passing object as parameter.
 const user = (data) => {
   console.log(data.id)
   console.log(data.naam)

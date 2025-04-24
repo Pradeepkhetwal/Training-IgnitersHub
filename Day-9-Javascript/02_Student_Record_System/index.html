@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <form
+            onsubmit="event.preventDefault(); onFormSubmit()"
+            autocomplete="off"
+          >
+            <div>
+              <label for="name">Name</label>
+              <input
+                type="text"
+                placeholder="enter your name"
+                id="name"
+                name="name"
+              />
+            </div>
+            <div>
+              <label for="RollNo">RollNo</label>
+              <input
+                type="number"
+                placeholder="enter your RollNo"
+                id="RollNo"
+                name="RollNo"
+              />
+            </div>
+            <div>
+              <label for="Date of Birth">Date of Birth</label>
+              <input
+                type="date"
+                placeholder="enter your DOB"
+                id="DOB"
+                name="DOB"
+              />
+            </div>
+            <div>
+              <label for="Year">Year</label>
+              <input
+                type="text"
+                placeholder="enter your Year"
+                id="Year"
+                name="Year"
+              />
+            </div>
+            <div>
+              <label for="Branch">Branch</label>
+              <input
+                type="text"
+                placeholder="enter your Branch"
+                id="Branch"
+                name="Branch"
+              />
+            </div>
+            <div>
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+        </td>
+      </tr>
+    </table>
+    <table id="Student-list">
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Roll No</th>
+          <th>DOB</th>
+          <th>Year</th>
+          <th>Branch</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script src="script.js"></script>
+  </body>
+</html>
