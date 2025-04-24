@@ -1,0 +1,22 @@
+Local Storage is a built-in JavaScript feature that allows you to store key-value pairs on the browser side.
+
+Data is stored persistently, meaning it doesn't expire and remains even if the browser is closed and reopened.
+
+It's specific to the origin, meaning each website (or domain) has its own local storage, and data can't be accessed across domains.
+
+We have a localstorage object that is provided by the browser.
+
+All the key value pair of data stored can be checked by clicking on the inspect -> then-> Application -> localstorage.
+
+So we have mainly 2 methods setItem() and getItem()  provided by the localStorage object to interact with Local Storage.
+
+setItem(key, value)
+Purpose: Used to store a key-value pair in the browser's local storage.
+Syntax:
+localStorage.setItem('key', 'value');
+
+
+getItem(key)
+Purpose: Used to retrieve the value stored in local storage associated with the given key.
+Syntax:
+let value = localStorage.getItem('key');
